@@ -51,17 +51,4 @@ def logs():
 @app.get("/healthz")
 async def healthcheck():
     """Проверка здоровья для Docker."""
-    # Cам FastAPI
-    result = {"status": "ok"}
-
-    # Telegram API
-    try:
-        resp = requests.get(BOT_API_URL)
-        if resp.status_code != 200:
-            result["telegram_api"] = f"error {resp.status_code}"
-        else:
-            result["telegram_api"] = "ok"
-    except Exception as e:
-        result["telegram_api"] = str(e)
-
-    return result
+    return {"status": "ok"}
