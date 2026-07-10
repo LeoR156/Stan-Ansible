@@ -96,7 +96,8 @@ Standard command pack for bot father includes:
 ## Быстрое развертывание за 2 минуты на серверах Ubuntu или Debian с помощью Ansible :rocket:
 ### Подготовка:
  1. Клонируйте репозиторий командой `git clone https://github.com/LeoR156/Stan-Ansible`
- 2. Измените файл `inventory.ini` командой `nano inventory.ini`: Поменяйте IP на IP вашего реального сервера, при желании можно изменить имя пользователя и метод авторизации по SSH    #__Если вы запускаете Ansible прямо на самом сервере, куда ставите бота, то в inventory.ini вместо IP напишите: localhost ansible_connection=local__
+ 2. Измените файл `inventory.ini` командой `nano inventory.ini`: Поменяйте IP на IP вашего реального сервера.
+*(Примечание: Если вы запускаете Ansible прямо на самом сервере, куда ставите бота, то в inventory.ini вместо IP напишите `localhost ansible_connection=local`)*
  3. Измените  файл `vars.yml` командой `nano vars.yml`, впишите ваш реальный домен.
  4. Создайте и напишите в файл __.env__ следующие переменные: STAN, whitelist, whiteids и rollback. Команда: `nano .env`
  5. Скачайте __Ansible__ командой `sudo apt install ansible` (для Ubuntu/Debian).
